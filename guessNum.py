@@ -1,7 +1,8 @@
 import random
-r = random.randint(1, 10)
-
+r = random.randint(1, 100)
+count = 0
 while True:
+    count += 1
     num = input('請猜一個1~100的數字： ')
     if num.isdigit():
         num = int(num)
@@ -12,5 +13,6 @@ while True:
             print('比答案大')
         elif num < r:
             print('比答案小')
+        print('這是你猜的第', count, '次')
     else:
         print('請輸入數字')
